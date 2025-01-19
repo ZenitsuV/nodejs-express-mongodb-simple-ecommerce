@@ -80,8 +80,9 @@ exports.postEditProduct = (req, res, next) => {
 
 exports.getProducts = (req, res, next) => {
   Product.find()
-    // .select('title price -_id')
-    // .populate('userId', 'name')
+    // .select('title price -_id') - used to select specific values, 
+    // if we use (-) minus that is for excluding
+    // .populate('userId', 'name') 
     .then(products => {
       console.log(products);
       res.render('admin/products', {
