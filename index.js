@@ -36,7 +36,7 @@ app.use(errorController.get404);
 
 mongoose
   .connect(
-    'mongodb+srv://maximilian:9u4biljMQc4jjqbe@cluster0-ntrwp.mongodb.net/shop?retryWrites=true'
+    'mongodb+srv://vigneshpalanisamy:Vicky@$&1994@cluster01.savblhx.mongodb.net/'
   )
   .then(result => {
     User.findOne().then(user => {
@@ -51,7 +51,7 @@ mongoose
         user.save();
       }
     });
-    app.listen(3000);
+    app.listen(3010);
   })
   .catch(err => {
     console.log(err);
